@@ -5,8 +5,11 @@ services:
     build:
         # Will build in the current directory
         context: .
-        dockerfile: phase1.Dockerfile
         #  by passing a name here you are telling compose to name and tag the built image by this name
-    image: redis:4.0.11-alpine
+    image: FLASKAPP
+    environment:
+      - FLASK_ENV=development
     ports:
-        - '5000:80'
+        - '4000:5000'
+  redis:
+    image: redis:4.0.11-alpine
