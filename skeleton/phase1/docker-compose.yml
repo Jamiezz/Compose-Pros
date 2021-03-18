@@ -1,0 +1,9 @@
+version: '3'
+services:
+webapp:
+build:
+context:
+
+
+FLASK_ENV=development
+PORT=5000
